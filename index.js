@@ -15,12 +15,8 @@ function fizzbuzz(num) {
       }
     }
   }
-
   return arr
 }
-// for (i=0, i<num,i++) {
-  
-// }
 console.log(fizzbuzz(30))
 console.log(fizzbuzz(10))
 console.log(fizzbuzz(12))
