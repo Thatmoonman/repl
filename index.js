@@ -118,3 +118,24 @@ function printFives(max) {
 // 10
 // 15
 
+// Problem 4
+// Write a function `printReverse(min, max)` that print out all numbers from max
+// to min (exclusive), in reverse order.
+//
+function printReverse(min,max) {
+  for (i=max-1; i>min; i--) {
+    console.log(i)
+  }
+}
+// Examples
+//
+printReverse(13, 18) // prints
+// 17
+// 16
+// 15
+// 14
+//
+printReverse(90, 94) // prints
+// 93
+// 92
+// 91
