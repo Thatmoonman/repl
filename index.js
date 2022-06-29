@@ -22,3 +22,5 @@ function fizzbuzz(num) {
   
 // }
 console.log(fizzbuzz(30))
+console.log(fizzbuzz(10))
+console.log(fizzbuzz(12))
