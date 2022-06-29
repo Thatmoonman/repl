@@ -17,6 +17,21 @@ function fizzbuzz(num) {
   }
   return arr
 }
+
+function wizzbuzz(lowNum, highNum) {
+  for (i=lowNum; i<=highNum; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      continue
+    } else {
+      if (i % 3 ===0 || i % 5 === 0) {
+        console.log(i)
+      }
+    }
+  }
+}
+  
+
 console.log(fizzbuzz(30))
 console.log(fizzbuzz(10))
 console.log(fizzbuzz(12))
+(wizzbuzz(1, 30))
