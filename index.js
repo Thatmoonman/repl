@@ -129,13 +129,28 @@ function printReverse(min,max) {
 }
 // Examples
 //
-printReverse(13, 18) // prints
+//printReverse(13, 18) // prints
 // 17
 // 16
 // 15
 // 14
 //
-printReverse(90, 94) // prints
+//printReverse(90, 94) // prints
 // 93
 // 92
 // 91
+
+//Problem 5
+// Write a function `sumNums(max)` that returns the sum of all positive numbers less
+// than or equal to max.
+//
+function sumNum(max) {
+  for (i=0; i<=max; i+=i) {
+    console.log(i)
+  }
+}
+// Examples:
+//
+sumNums(4); // => 10
+sumNums(10); // => 55
+sumNums(365); // => 66795
