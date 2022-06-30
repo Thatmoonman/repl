@@ -23,11 +23,13 @@ function pigLatinize(word) {
     if (word[0] === vowels[i]) {
       return word + "yay";
     }
-  } //cut first letter and then add back with +"way" at end of string
+  } 
+  let firstLetter = word[0]
+  return word.slice(1,word.length) + firstLetter + "ay"
 }
 // Examples:
 //
 console.log(pigLatinize("teacher")); // => "eachertay"
-// pigLatinize("trash"); // => "ashtray"
+console.log(pigLatinize("trash")); // => "ashtray"
 console.log(pigLatinize("eat")); // => "eatyay"
-// pigLatinize("orange"); // => "orangeyay"
+console.log(pigLatinize("orange")); // => "orangeyay"
