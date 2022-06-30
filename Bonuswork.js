@@ -23,9 +23,7 @@ function pigLatinize(word) {
     if (word[0] === vowels[i]) {
       return word + "yay";
     }
-  } 
-  let firstLetter = word[0]
-  return word.slice(1,word.length) + firstLetter + "ay"
+  } return word.slice(1,word.length) + word[0] + "ay"
 }
 // Examples:
 //
