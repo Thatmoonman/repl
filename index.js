@@ -144,13 +144,80 @@ function printReverse(min,max) {
 // Write a function `sumNums(max)` that returns the sum of all positive numbers less
 // than or equal to max.
 //
-function sumNum(max) {
-  for (i=0; i<=max; i+=i) {
-    console.log(i)
+function sumNums(max) {
+  let sum = 0
+  for (i=0; i<=max; i++) {
+  sum += i
   }
+  return sum
+}
+
+// Examples:
+//
+//console.log(sumNums(4)); // => 10
+//console.log(sumNums(10)); // => 55
+//console.log(sumNums(365)); // => 66795
+
+//Problem 6
+// Define a function `isFactorOf(number, factor)` that returns `true` if `factor`
+// is a factor of `number`. `false` otherwise. A factor is a number that divides
+// another number without a leftover remainder.
+//
+function isFactorOf(number,factor) {
+  return number % factor === 0
 }
 // Examples:
 //
-sumNums(4); // => 10
-sumNums(10); // => 55
-sumNums(365); // => 66795
+//console.log(isFactorOf(6,2)); // => true
+//console.log(isFactorOf(-6, 2)); // => true
+//console.log(isFactorOf(5,0)); // => false
+//console.log(isFactorOf(22, 7)); // => false
+
+// Problem 7
+// Define a function `fizzBuzz(max)` that takes a number and prints  every number
+// from 0 to `max` that is divisible by either 3 or 5, but not both.
+//
+function fizzBuzz(max) {
+  for (i=0; i<=max; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      continue
+    } else {
+      if (i % 3 === 0 || i % 5 === 0) {
+        console.log(i)
+    }
+  }
+}
+}
+// Examples:
+//
+//fizzBuzz(20); // prints
+// 3
+// 5
+// 6
+// 9
+// 10
+// 12
+// 18
+
+// Problem 8
+// Define a function `isPrime(number)` that returns `true` if `number` is prime.
+// Otherwise, false. Assume `number` is a positive integer.
+//
+function isPrime(number) {
+  if (number < 2) {
+    return false //eliminate 2 problem
+  }
+  for (i=2; i<number; i++) {
+    if (number % i === 0) {
+      return false //only stops loop if its false
+    }
+  } return true //implied true because function never breaks
+}
+
+// Examples:
+//
+console.log(isPrime(2)); // => true
+console.log(isPrime(10)); // => false
+console.log(isPrime(11)); // => true
+console.log(isPrime(9)); // => false
+console.log(isPrime(2017)); // => true
