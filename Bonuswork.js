@@ -45,3 +45,23 @@ console.log(pigLatinize("teacher")); // => "eachertay"
 console.log(pigLatinize("trash")); // => "ashtray"
 console.log(pigLatinize("eat")); // => "eatyay"
 console.log(pigLatinize("orange")); // => "orangeyay"
+
+
+// Write a function `inPigLatin(sentence)` that translates an entire sentence into
+// pig latin. Any words that were capitalized in the input sentence should be also
+// capitalized in the new sentence. Use the `pigLatinize(word)` function you created earlier.
+//
+function inPigLatin(sentence) {
+  let pigSplit = sentence.split(" ");
+  let pigSentence = []
+  for (i= 0; i<pigSplit.length; i++) {
+    let piggy = pigLatinize(pigSplit[i])
+    pigSentence.push(piggy)
+  } 
+  return pigSentence.join("")
+}
+// Examples:
+//
+console.log(inPigLatin("Shmanthony is the best teacher")); // => 'Anthonyshmay isyay ethay estbay eachertay'
+console.log(inPigLatin("let us Dance")); // => 'etlay usyay Anceday'
+console.log(inPigLatin("this is the time of my life")); // => 'isthay isyay ethay imetay ofyay myay ifelay"
