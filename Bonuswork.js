@@ -17,13 +17,27 @@
 //
 // Note: y should not be considered a vowel
 //
+// function pigLatinize(word) {
+//   let vowels = ["a","e","i","o","u"]
+//   for (i=0;i<vowels.length;i++) {
+//     if (word[0] === vowels[i]) {
+//       return word + "yay";
+//     }
+//   } return word.slice(1,word.length) + word[0] + "ay"
+// }
+
 function pigLatinize(word) {
-  let vowels = ["a","e","i","o","u"]
-  for (i=0;i<vowels.length;i++) {
-    if (word[0] === vowels[i]) {
-      return word + "yay";
+  let vowels = 'aeiou';
+  if (vowels.includes(word[0])) return word + 'yay';
+  let newWord = '';
+
+  for (let i = 0; i < word.length; i++) {
+    if (vowels.includes(word[i])) {
+      return word.slice(i) + word.slice(0, i) + 'ay'
     }
-  } return word.slice(1,word.length) + word[0] + "ay"
+  }
+
+  return newWord
 }
 // Examples:
 //
