@@ -53,15 +53,34 @@ console.log(pigLatinize("orange")); // => "orangeyay"
 //
 function inPigLatin(sentence) {
   let pigSplit = sentence.split(" ");
-  let pigSentence = []
-  for (i= 0; i<pigSplit.length; i++) {
-    let piggy = pigLatinize(pigSplit[i])
-    pigSentence.push(piggy)
-  } 
-  return pigSentence.join("")
+  let piggy = pigSplit.map(pigLatinize);
+  
+  return piggy.join(" ")
 }
 // Examples:
 //
 console.log(inPigLatin("Shmanthony is the best teacher")); // => 'Anthonyshmay isyay ethay estbay eachertay'
 console.log(inPigLatin("let us Dance")); // => 'etlay usyay Anceday'
 console.log(inPigLatin("this is the time of my life")); // => 'isthay isyay ethay imetay ofyay myay ifelay"
+
+//Problem 3
+// Write a function `maxPairProduct(array)` that takes in an array of numbers and
+// returns the largest product of any pair of numbers from the array.  
+//
+//  
+function maxPairProduct(array){
+  let bigNumOne = 0
+  let bigNumTwo = 0
+
+  for(i=0;i<array.length;i++) {
+    if (array[i] > bigNumOne) {
+      bigNumOne = array[i]
+    } else if (array[i] > bigNumTwo) {
+      bigNumTwo = bigNumOne
+      bigNumOne = array[i]
+    }
+  }
+  return bigNumOne*bigNumTwo
+}
+console.log(maxPairProduct([5, 7, 6, 9, 3])); // => 63
+console.log(maxPairProduct([4, 2, 5, 6])); // => 30
